@@ -1,0 +1,289 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+ background: black;
+ display: flex;
+ position: relative;
+ height: 100vh;
+ width: 100vw;
+ justify-content: center;
+ align-items: center;
+ padding-inline: 20px;
+}
+.image-card img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.wrapper{
+    color: white;
+    background-color: #ffffff1a;
+    border: 1px solid #ffffff30;
+    border-radius: 7%;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    height: 471px;
+    align-items: center;
+    justify-content: space-evenly;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+.buttons button{
+    padding: 8px 8px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    border: 1px solid;
+    border-radius: 5px;
+}
+.buttons button i{
+    margin-right: 5px;
+}
+.buttons button:hover{
+    background: #ffffffb9;
+    color: #131313;
+}
+#circle1{
+    position: fixed;
+    height: 13rem;
+    width: 13rem;
+    border-radius: 50%;
+    top: 5%;
+    left: 30%;
+    box-shadow: 0 0 50px #d84869;
+    background: linear-gradient(-25deg, #d84869, #f46641);
+    animation: circle1Animate 10s ease-in-out infinite;
+}
+@keyframes circle1Animate {
+   50%{
+    left: 33%;
+    top: 4%;
+    transform: scale(1.11);
+   }
+}
+#circle2{
+    position: absolute;
+    height: 19rem;
+    width: 19rem;
+    border-radius: 50%;
+    bottom: 5%;
+    right: 30%;
+    box-shadow: 0 0 50px #5648d8;
+    background: linear-gradient(-25deg, #5648d8, #8641f4);
+    animation: circle2Animate 8s infinite;
+}
+@keyframes circle2Animate {
+    50%{
+        bottom: 6%;
+        right: 31%;
+    }
+}
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border: 2px solid #ffffff59;
+    width: 500px;
+    scale: 0;
+    background: #00000088;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(100px);
+    color: white;
+    z-index: 1;
+    padding: 20px 25px;
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+}
+.modal-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icons{
+    border: 1px solid #ffffff88;
+    padding: 17px;
+    border-radius: 50%;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    align-items: center;
+    margin: 10px 0px;
+    gap: 10px;
+    justify-content: center;
+    transition: all 0.5s;
+    margin-bottom: 25px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+}
+.line{
+    margin-block: 20px;
+}
+.icon-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+a{
+    text-decoration: none;
+}
+#close{
+    font-size: 2rem;
+    background-color: transparent;
+    color: white;
+    border: transparent;
+    cursor: pointer;
+}
+#close2{
+    font-size: 2rem;
+    background-color: transparent;
+    color: white;
+    border: transparent;
+    cursor: pointer;
+}
+#linkedin{
+    color: #0A66C2;
+    border-color: #0A66C2;
+}
+#linkedin:hover{
+    color: white;
+    background-color: #0A66C2;
+}
+#twitter{
+    color: white;
+    border-color: white ;
+}
+#twitter:hover{
+    background-color: white;
+    color: black;
+}
+#instagram{
+    color: #cb2770;
+    border-color: #cb2770;
+}
+#instagram:hover{
+    color: white;
+    background-color: #cb2770;
+}
+#whatsapp{
+    color: #2fe664;
+    border-color: #2fe664;
+}
+#whatsapp:hover{
+    color: white;
+    background-color: #2fe664;
+}
+#telegram{
+    color: #229ED9;
+    border-color: #229ED9;
+}
+#telegram:hover{
+    color: white;
+    background-color: #229ED9;
+}
+#github{
+    color: white;
+    border-color: white ;
+}
+#github:hover{
+    color: #333;
+    background-color: white;
+}
+.active{
+    scale: 1;
+}
+.overlay{
+    position: fixed;
+    background-color: #5f5f5f83;
+    top: 0;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;    
+    transition: 0.5s ease-in-out;
+}
+.overlayactive{
+    opacity: 1;
+    pointer-events: initial;
+}
+.modal-heading1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.line{
+    width: 100%;
+}
+.name{
+    text-align: center;
+}
+.aboout{
+    text-align: center;
+}
+#modal{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.about{
+    color: white;
+    text-shadow: black;
+    line-height: 1.5;
+    letter-spacing: .1rem;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
+}
+
+@media screen and (max-width:425px) {
+    .name h1{
+        font-size: 1.2rem;
+    }
+    .buttons{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+@media screen and (max-width:525px) {
+    .modal{
+        width: 80vw;
+    }
+    .icon-container{
+        flex-wrap: wrap;
+        gap: 5px;
+        justify-content: space-evenly;
+    }
+    .about{
+    font-size: 1rem;
+    line-height: 1.2;
+    letter-spacing: normal;
+    }
+    #modal{
+        overflow-y: scroll;
+        width: 100vw;
+    }
+}
